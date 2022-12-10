@@ -1,7 +1,9 @@
+import ButtonAppBar from "./components/app-bar.component";
+
 const App = () => {
   return (
     <div>
-      Ready to start coding!!!
+      <ButtonAppBar />
     </div>
   );
 }
