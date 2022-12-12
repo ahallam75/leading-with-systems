@@ -1,18 +1,22 @@
+import About from "./components/about/about.component";
+import Contact from "./components/contact/contact.component";
 import BasicCard from "./components/cards-info/cards-info.component";
 import ButtonAppBar from "./components/app-bar/app-bar.component";
+import Services from "./components/services/services.component";
+import { useRef } from "react";
 
 const cardInfo = [
   {
     id: 1,
-    icon: 'search',
-    title: 'EXAMINE YOUR HISTORY',
-    text: 'Many unhealthy symptoms can find their roots in our individual family systems. As we learns about systems theory, we will also explore our own family systems in an effort to increase objectivity and clarity and lower our emotional responses. This is also be effective when considering organizations: their beginnings and development over time, their leadership and contributions to its members’ well-being.'
-  },
-  {
-    id: 2,
     icon: 'local_library',
     title: 'LEARN SYSTEMS THEORY',
     text: 'Family Systems Theory is rooted in eight concepts that see human behavior as stemming from the power of the system, which is composed of the members of a family structure and their various relationships, roles, and interactions. Expanding our understanding of how the emotional system guides our family, work, and other social systems unveils more effective options to counter issues we find problematic.'
+  },
+  {
+    id: 2,
+    icon: 'search',
+    title: 'EXAMINE YOUR HISTORY',
+    text: 'Many unhealthy symptoms can find their roots in our individual family systems. As we learns about systems theory, we will also explore our own family systems in an effort to increase objectivity and clarity and lower our emotional responses. This is also be effective when considering organizations: their beginnings and development over time, their leadership and contributions to its members’ well-being.'
   },
   {
     id: 3,
@@ -28,11 +32,19 @@ const cardInfo = [
   },
 ]
 
-const App = () => {
+const App = (props) => {
+
+  const resultRef1 = useRef(null);
+  const resultRef2 = useRef(null);
+  const resultRef3 = useRef(null);
+
   return (
     <div>
-      <ButtonAppBar />
+      <ButtonAppBar resultRef1={resultRef1} resultRef2={resultRef2} resultRef3={resultRef3} />
+      <About ref={resultRef1} />
       <BasicCard cardInfo={cardInfo}/>
+      <Services ref={resultRef2} />
+      <Contact  ref={resultRef3} />
     </div>
   );
 }

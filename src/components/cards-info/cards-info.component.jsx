@@ -7,9 +7,9 @@ import Typography from '@mui/material/Typography';
 
 export default function BasicCard({cardInfo}) {
   return (
-    <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
+    <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', }}>
       {cardInfo.map(({id, title, text, icon}) => (
-        <Card key={id} sx={{ minWidth: 275, m:4, boxShadow: 24, borderRadius: 4, }} style={{ background: '#00bfa5' }}>
+        <Card key={id} sx={{ minWidth: 275, m:4, boxShadow: 0, borderRadius: 4, }} style={{ background: '#00bfa5' }}>
           <CardContent style={{
             display: 'flex',
             justifyContent: 'center',
