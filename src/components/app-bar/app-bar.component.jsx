@@ -30,7 +30,7 @@ export default function ButtonAppBar({ resultRef1, resultRef2, resultRef3 }) {
             Learn &#x2022; Examine &#x2022; Apply &#x2022; Differentiate
           </Typography>
           <Button onClick={onClickAbout} variant="outlined" sx={{ mr: 1 }} color="inherit">About</Button>
-          <Button onClick={onClickServices} variant="outlined" color="inherit">Services</Button>
+          <Button onClick={onClickServices} variant="outlined" sx={{ mr: 1 }} color="inherit">Services</Button>
           <Button onClick={onClickContact} variant="outlined" sx={{ mr: 1 }} color="inherit">Contact</Button>
         </Toolbar>
       </AppBar>
